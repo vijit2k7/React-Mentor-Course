@@ -11,7 +11,7 @@ export const UseStateCounter = () => {
     {
         
       setCounter(counter=>counter+1);
-      setCounter2(counter2=>counter2+2);
+      // setCounter2(counter2=>counter2+2);
       console.log('incremented',counter,counter2);
     }
   
@@ -44,3 +44,5 @@ export const UseStateCounter = () => {
         </>
     )
 }
+
+

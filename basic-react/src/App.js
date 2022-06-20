@@ -1,38 +1,57 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
+import axios from 'axios';
 import './App.css';
 import { List } from './components/List';
 import {UseStateCounter} from './components/UseStateCounter';
 import {UseState2} from './components/UseState2';
 import {StepTracker} from './components/StepTracker';
+import LifeCycle from './components/LifeCycle';
+import UseEffect1 from './components/UseEffect1';
+import UseEffect2 from './components/UseEffect2';
+import UseEffect3 from './components/UseEffect3';
 
 //jsx must have a single element as parent
 
 
-function App() {
+function App(props) {
 
+  // console.log('arr in App is',props.arr);
   const [toggle,setToggle] = useState(false);
   //Props is used to pass data from Parent child
-  const listArr=[{name:'Tarzan',id:1,reviews:'Good'},{name:'Tees',id:2,reviews:'Poor'},{name:'RRR',id:3,reviews:'Awesome'}];
+  let listArr=[];
+  useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then((res)=>{
+      listArr=res.data;
+      // console.log('response data',listArr);
+    });
+  },[])
+
   function onToggle()
   {
-      console.log('toggle is',toggle);
       setToggle(toggle=>!toggle);
   }
+
   return (
     <div className='app'>
+      {/* <div>
         {toggle&&<ul>
-          {listArr.map((item,index)=>{
-            return <List k={index} itemName={item}/>
-          })}
-        </ul>}
-        {!toggle&&<UseStateCounter/>}
+            {listArr.map((item,index)=>{
+              return <List k={index} itemName={item}/>
+            })}
+          </ul>}
+          {!toggle&&<UseStateCounter/>}
 
-        <button onClick={onToggle}>Toggle</button>
-        {toggle&&<UseState2/>}
-        <StepTracker/>
+          <button onClick={onToggle}>Toggle</button>
+          {!toggle&&<UseState2/>}
+          {!toggle&&<StepTracker/>}
+      </div> */}
+      {/* <LifeCycle/> */}
+      {/* <UseEffect1></UseEffect1> */}
+      {/* <UseEffect2></UseEffect2> */}
+      <UseEffect3></UseEffect3>
     </div>
   );
 }
 
-
 export default App;
+
