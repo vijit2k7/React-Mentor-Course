@@ -9,6 +9,7 @@ import LifeCycle from './components/LifeCycle';
 import UseEffect1 from './components/UseEffect1';
 import UseEffect2 from './components/UseEffect2';
 import UseEffect3 from './components/UseEffect3';
+import { BookParent } from './components/BookParent';
 
 //jsx must have a single element as parent
 
@@ -40,15 +41,15 @@ function App(props) {
             })}
           </ul>}
           {!toggle&&<UseStateCounter/>}
-
-          <button onClick={onToggle}>Toggle</button>
           {!toggle&&<UseState2/>}
           {!toggle&&<StepTracker/>}
       </div> */}
       {/* <LifeCycle/> */}
-      {/* <UseEffect1></UseEffect1> */}
+      {/* {!toggle&&<UseEffect1></UseEffect1>} */}
       {/* <UseEffect2></UseEffect2> */}
-      <UseEffect3></UseEffect3>
+      {/* <UseEffect3></UseEffect3> */}
+      {/* <button onClick={onToggle}>Toggle</button> */}
+      <BookParent></BookParent>
     </div>
   );
 }

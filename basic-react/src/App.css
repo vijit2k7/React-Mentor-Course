@@ -31,4 +31,26 @@ h1{
     flex-direction: column;
 }
 
+.input{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 40%;
+    font-size: 20px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.error-msg{
+    color:red;
+}
+
 

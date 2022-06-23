@@ -6,15 +6,23 @@ function useEffect1() {
     const [Y,setY]=useState(0);
 //Application any asynchronous tasks api,eventlisteners,timer
 
+
     useEffect(()=>{
-        console.log('inside useEffect');
-        window.addEventListener('mousemove',(e)=>{
-               setX(X=>e.clientX);
-               setY(Y=>e.clientY);
-        });
-    },[]) //componentDidMount 
-    //empty--->useEffect will run only once
-    //mousemove1 //mousemove2 //mousemove3 //movemove4
+        console.log('inside useEffect component mounted');
+        function eventListener(e)
+        {
+            console.log('event listener',e.clientX,e.clientY);
+                 setX(X=>e.clientX);
+                 setY(Y=>e.clientY);
+        }
+        window.addEventListener('mousemove',eventListener);
+        
+        return ()=>{  //componentWillUnmount
+           console.log('component unmounted') 
+           window.removeEventListener('mousemove',eventListener);
+        }
+
+    },[])
     return (
         <>
         <h1>Use Effect Component</h1>
