@@ -40,6 +40,7 @@ h1{
 input{
     width: 40%;
     font-size: 20px;
+    margin: 20px;
 }
 .post{
     display: flex;
@@ -51,6 +52,14 @@ input{
 
 .error-msg{
     color:red;
+}
+
+.dark{
+    background-color: grey;
+}
+
+.light{
+    background-color: khaki;
 }
 
 
