@@ -20,6 +20,9 @@ import ReducerCounter from './components/useReducer/ReducerCounter';
 import PostuseState from './components/useReducer/PostuseState';
 import PostuseReducer from './components/useReducer/PostuseReducer';
 import { CalculateFactorial } from './components/Memo-Callbacks/CalculateFactorial';
+import UseCallback from './components/Memo-Callbacks/UseCallback';
+import { CounterCustomHook } from './components/CounterCustomHook';
+import CounterDebounce from './components/CounterDebounce';
 //jsx must have a single element as parent
 
 
@@ -69,7 +72,10 @@ function App(props) {
       {/* <ReducerCounter></ReducerCounter> */}
       {/* <PostuseState></PostuseState>
       <PostuseReducer></PostuseReducer> */}
-      <CalculateFactorial></CalculateFactorial>
+      {/* <CalculateFactorial></CalculateFactorial> */}
+      {/* <UseCallback></UseCallback> */}
+      {/* <CounterCustomHook></CounterCustomHook> */}
+      <CounterDebounce></CounterDebounce>
     
     </div>
   );
