@@ -7,3 +7,4 @@ const arr=[{title:'KGF',text:'sdhjahd'},{title:'KGF',text:'sdhjahd'},{title:'KGF
 
 ReactDOM.render(<App arr={arr}/>, document.getElementById('root'));
 
+

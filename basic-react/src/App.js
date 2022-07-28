@@ -23,6 +23,9 @@ import { CalculateFactorial } from './components/Memo-Callbacks/CalculateFactori
 import UseCallback from './components/Memo-Callbacks/UseCallback';
 import { CounterCustomHook } from './components/CounterCustomHook';
 import CounterDebounce from './components/CounterDebounce';
+import BasicRef from './components/useRefs/BasicRef';
+import FocusRef from './components/useRefs/FocusRef';
+import AdvancedRefs from './components/useRefs/AdvancedRefs';
 //jsx must have a single element as parent
 
 
@@ -75,8 +78,10 @@ function App(props) {
       {/* <CalculateFactorial></CalculateFactorial> */}
       {/* <UseCallback></UseCallback> */}
       {/* <CounterCustomHook></CounterCustomHook> */}
-      <CounterDebounce></CounterDebounce>
-    
+      {/* <CounterDebounce></CounterDebounce> */}
+      {/* <BasicRef></BasicRef> */}
+      {/* <FocusRef></FocusRef> */}
+    <AdvancedRefs></AdvancedRefs>
     </div>
   );
 }

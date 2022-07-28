@@ -1,5 +1,5 @@
 {
-  "name": "redux-demo",
+  "name": "redux-toolkit-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "immer": "^9.0.15",
-    "redux": "^4.2.0",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.1"
+    "@reduxjs/toolkit": "^1.8.3"
   }
 }
